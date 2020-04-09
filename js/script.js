@@ -14,10 +14,18 @@ function playAudio() {
     }
 };
 
+x.onended = function () {
+    krik = false;
+
+    if (interval == 0) {
+        randomInterval();
+    };
+};
+
 function randomInterval() {
     if (interval == 0 && krik == false) {
         interval = Math.random() * krikInterval;
-        // console.log(interval);
+        console.log(interval);
         setTimeout(playAudio, interval);
         document.querySelector('.halloween').classList.add('halloween-active');
         krik = true;

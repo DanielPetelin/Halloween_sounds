@@ -8,15 +8,14 @@ document.querySelector('.halloween').onclick = randomInterval;
 function playAudio() {
     if (krik) {
         x.play();
-        innerval = 0;
+        interval = 0;
     } else {
         x.pause();
-    }
+    };
 };
 
 x.onended = function () {
     krik = false;
-
     if (interval == 0) {
         randomInterval();
     };
@@ -29,5 +28,10 @@ function randomInterval() {
         setTimeout(playAudio, interval);
         document.querySelector('.halloween').classList.add('halloween-active');
         krik = true;
+    } else {
+        clearInterval(interval);
+        krik = false;
+        document.querySelector('.halloween').classList.remove('halloween-active');
+        playAudio();
     };
 };

@@ -1,0 +1,11 @@
+.halloween {
+    height: 128px;
+    width: 128px;
+    margin: 29px;
+    border: 2px solid orange;
+    background: url(../images/pumpkin.png);
+}
+
+.halloween-active {
+    background: url(../images/pumpkin2.png); 
+}

@@ -1,7 +1,7 @@
 .halloween {
-    height: 128px;
-    width: 128px;
-    margin: 29px;
+    height: 68px;
+    width: 68px;
+    margin: 30px;
     border: 2px solid orange;
     background: url(../images/pumpkin.png);
 }
